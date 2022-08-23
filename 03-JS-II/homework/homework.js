@@ -44,6 +44,20 @@ function saludo(idioma) {
   // Si "idioma" es "mandarin", devuelve "Ni Hao!"
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
+  // Metodo con swith
+  //switch(idioma) {
+  //  case 'aleman': {
+  //  return "Guten Tag!";
+  //} 
+  // case 'mandarin': {
+  // retun "Ni Hao!";
+  //} 
+  // case 'ingles': {
+  // return "Hello!";
+  //}
+  // default: return "Hola";
+  //}
+  //   *******     *******
   // Tu código:
   if (idioma==="aleman") {
     return "Guten Tag!";
@@ -84,6 +98,14 @@ function colors(color) {
         return "Color not found";
   }
 }
+//Otra forma corta de hacer el switch.
+//switch (color){
+//case 'blue': return "This is blue";
+//case 'red': return "This is red";
+//case 'green': return "This is green";
+//case 'orange': return "This is orange";
+//default: return "Color not found";
+//}
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -95,6 +117,7 @@ function esDiezOCinco(numero) {
     return false;
   }
 }
+// return(numero===10 || numero===5)
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
@@ -106,6 +129,7 @@ function estaEnRango(numero) {
     return false;
   }
 }
+
 
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
@@ -121,6 +145,17 @@ function esEntero(numero) {
     return false;
   }
 }
+//if(numero === Math.floor(numero)) {
+// return true;
+//}
+// return false;
+
+//Tercera forma de realizar
+//if(Numbre.isIntegrer(numero)){
+  //return true;
+//}else {
+//return false;
+//}
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -162,8 +197,8 @@ function operadoresLogicos(num1, num2, num3) {
   } else if (num1 > num2 && num1 > num3 && num1 > 0) {
     return "Número 1 es mayor y positivo";
   } else if (num3 > num1 && num3 > num2) {
-    var resultado = num3 + 1;
-    return resultado;
+    var nuevoNum3 = num3 + 1;
+    return nuevoNum3;
   } else {
     return false;
   }
@@ -177,10 +212,15 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
 //Analisis ejemplo
   //numero --> 15
+  //15 % 1 === 15 *No lo voy a iterar (repetir en ciclo).
+  //
   //15 % 2 === 1
   //15 % 3 === 0
-  //15 % 4 === 3
+  //15 % 4 === 3  *es distinto de cero !== 0
   //15 %
+  //15 % 14 !== 0
+  //
+  //15 % 15 === 1 *No lo voy a iterar
   if (numero === 0 || numero === 1) {
     return false;
   }
@@ -188,7 +228,8 @@ function esPrimo(numero) {
     if(numero % i === 0) {
       return false;
     }
-  } return true;
+  } 
+  return true;
 }
 
 function esVerdadero(valor){
@@ -224,6 +265,14 @@ function tieneTresDigitos(numero){
     return false;
   }
 }
+// Otra forma de realizarlo
+// var str = numero + "";
+// var digitos = str.length;
+// if(digitos ===3) {
+// return true;
+// }else {
+// return false;
+//}
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
@@ -240,6 +289,16 @@ function doWhile(numero) {
   } while (aux <9)
   return numero;
 }
+//
+// var acc = 1;
+// var resultado = numero;
+//
+// do {
+// if(acc !==8) {
+// resultado = numero + 5;
+// acc = acc + 1;
+// }
+// } while (acc < 9)
 
 
 // No modificar nada debajo de esta línea
