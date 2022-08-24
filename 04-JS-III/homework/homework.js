@@ -15,6 +15,11 @@ function devolverUltimoElemento(array) {
   return elemento;
 }
 
+// *Segunda forma
+// return array[array.length-1];
+// *Tercera forma
+// return array.pop();
+
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
@@ -22,6 +27,8 @@ function obtenerLargoDelArray(array) {
   var largo = array.length;
   return largo;
 }
+// *Segunda forma
+// return array.length;
 
 
 function incrementarPorUno(array) {
@@ -37,6 +44,18 @@ function incrementarPorUno(array) {
   } 
   return nuevoArray;
 }
+// *Forma reducida
+// for(let i=0; i<array.length; i++) {
+// array[i] = array[i] + 1;
+// }
+// return array;
+
+// *Segunda forma
+// let arraySecundario = []
+// for (let i=0; i < array.length; i++) {
+// arraySecundario.push(array[i] + 1);
+// }
+// return arraySecundario
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -108,6 +127,13 @@ function promedioResultadosTest(resultadosTest) {
   var promedio = suma / cantidad; 
   return promedio;
 }
+// *Forma simplificada
+// var suma = 0
+//
+// for(var i=0; i < resultadosTest.length; i++) {
+// suma = suma + resultadosTest[i];
+// }
+// return suma / resultadosTest.length;
 
 
 function numeroMasGrande(numeros) {
@@ -122,7 +148,9 @@ function numeroMasGrande(numeros) {
     }
   } return max;
 }
-
+//max = numeroMasGrande
+// *Segunda forma
+// return Math.max(...numeros)
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
